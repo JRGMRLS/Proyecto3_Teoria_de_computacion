@@ -127,9 +127,3 @@ n celdas y se muestra en cada paso, por lo que la impresión cuesta Θ(n²).
 Las cotas se entienden para n creciente; la entrada vacía cuesta O(1).
 El espacio de trabajo es O(n) en ambos ejemplos, sin acumular la traza en memoria.
 Si se guarda la salida en un archivo, su tamaño crece con la columna de impresión.
-
-## Pendientes de entrega
-
-Agregar integrantes y carnés confirmados, enlace del repositorio y enlace del
-video. Preparar el documento final con diagrama de flujo y el video no listado
-de máximo 7 minutos. Cada integrante debe aportar cambios reales al repositorio.
