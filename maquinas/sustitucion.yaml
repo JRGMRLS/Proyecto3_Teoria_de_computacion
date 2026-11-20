@@ -1,0 +1,11 @@
+# Cada escritura deja el lector en la misma celda; el movimiento es otro paso.
+mt:
+  estados: [q0, avanzar]
+  alfabeto: ['1', '0', '#', B]
+  estado_inicial: q0
+  blanco: B
+  transiciones:
+    - 'q0 1 0 avanzar'
+    - 'q0 # 1 avanzar'
+    - 'avanzar 0 R q0'
+    - 'avanzar 1 R q0'

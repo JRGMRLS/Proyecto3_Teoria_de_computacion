@@ -1,0 +1,29 @@
+# q0: anterior cero/inicio; q1: anterior uno.
+# Al encontrar un uno repetido, X marca un hueco que se desplaza al final.
+# Después se vuelve al inicio para buscar el siguiente bloque repetido.
+mt:
+  estados: [q0, q1, hueco, leer, tomar0, tomar1, poner0, poner1, volver, siguiente, fin, borrar, retroceder]
+  alfabeto: ['0', '1', B, X]
+  estado_inicial: q0
+  blanco: B
+  transiciones:
+    - 'q0 0 R q0'
+    - 'q0 1 R q1'
+    - 'q1 0 R q0'
+    - 'q1 1 X hueco'
+    - 'hueco X R leer'
+    - 'leer 0 X tomar0'
+    - 'leer 1 X tomar1'
+    - 'tomar0 X L poner0'
+    - 'tomar1 X L poner1'
+    - 'poner0 X 0 volver'
+    - 'poner1 X 1 volver'
+    - 'volver 0 R siguiente'
+    - 'volver 1 R siguiente'
+    - 'siguiente X R leer'
+    - 'leer B L fin'
+    - 'fin X B borrar'
+    - 'borrar B L retroceder'
+    - 'retroceder 0 L retroceder'
+    - 'retroceder 1 L retroceder'
+    - 'retroceder B R q0'
